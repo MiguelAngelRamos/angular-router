@@ -9,6 +9,8 @@ import { UserComponent } from './pages/user/user.component';
 import { UsersComponent } from './pages/users/users.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ContainerPhotoComponent } from './pages/container-photo/container-photo.component';
+import { PhotoIdComponent } from './pages/photo-id/photo-id.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     UserComponent,
     UsersComponent,
-    NavbarComponent
+    NavbarComponent,
+    ContainerPhotoComponent,
+    PhotoIdComponent
   ],
   imports: [
     BrowserModule,
