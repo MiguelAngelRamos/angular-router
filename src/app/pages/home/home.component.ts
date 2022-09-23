@@ -12,7 +12,6 @@ export class HomeComponent implements OnInit {
 
   public posts: IPost [] = [];
   public comments: IComment [] = [];
-  public messageButton: string = 'Ver comentarios';
   public comentariosFiltrados: IComment [] = [];
   public isVisible: boolean = false;
 
@@ -25,9 +24,12 @@ export class HomeComponent implements OnInit {
 
   comentariosId(id: number) {
     this.comentariosFiltrados = this.comments.filter( comentarios => comentarios.postId === id);
-    this.isVisible = !this.isVisible;
-    this.isVisible == false? this.messageButton = 'Ver comentarios': this.messageButton = 'Ocultar comentarios';
+    this.isVisible = true;
     console.log(this.comentariosFiltrados);
+  }
+
+  closeComment() {
+    this.isVisible = !this.isVisible;
   }
 
 }
